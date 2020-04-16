@@ -1,0 +1,29 @@
+@keyframes pop-in-animation {
+  0% {
+    transform: translateX(100vw) scale(0.7);
+  }
+  100% {
+    transform: translateX(0vw) scale(1);
+  }
+}
+@keyframes pop-out-animation {
+  0% {
+    transform: translateX(0vw) scale(1);
+  }
+  100% {
+    transform: translateX(100vw) scale(0.7);
+  }
+}
+.pop-in {
+    animation: pop-in-animation 0.5s ease-in;
+}
+.pop-out {
+    animation: pop-out-animation 0.5s ease-in;
+}
+.router-page {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    display: flex;
+    top: 0
+}
