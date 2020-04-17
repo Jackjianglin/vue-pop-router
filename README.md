@@ -2,6 +2,8 @@
 
 50 行代码模拟一个vue 路由，到达新页面不会销毁旧页面
 
+## 预览
+
 ```
 function VuePopRouter({ routers }) {
     // 存放路由数据，响应式对象驱动dom 变换
