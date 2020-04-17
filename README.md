@@ -14,7 +14,9 @@ yarn serve
 ```
 
 ## 预览
-![预览](./screenshot/normal.gif)
+>截图有点卡可以下载下来看
+
+![截图](./screenshot/normal.gif)
 
 ## 路由代码
 ```
