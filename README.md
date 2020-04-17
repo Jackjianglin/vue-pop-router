@@ -1,6 +1,6 @@
 # vue-pop-router
 
-50 行代码模拟一个vue 路由，到达新页面不会销毁旧页面
+50 行代码模拟一个vue 路由，到达新页面不会销毁旧页面 [详细解释](./StepByStep.md)
 
 
 ## Project setup
@@ -19,7 +19,7 @@ yarn serve
 ![截图](./screenshot/normal.gif)
 
 ## 路由代码
-```
+```JavaScript
 function VuePopRouter({ routers }) {
     // 存放路由数据，响应式对象驱动dom 变换
     const stackInfo = Vue.observable({
@@ -79,7 +79,7 @@ function VuePopRouter({ routers }) {
 
 ## App.vue 中注册入口
 
-```
+```JavaScript
 <template>
   <div id="app">
     <router-view></router-view>
@@ -89,7 +89,7 @@ function VuePopRouter({ routers }) {
 
 ## main.js 文件中初始化路由
 
-```
+```JavaScript
 import VuePopRouter from './router'
 const routers = [
   {
@@ -107,7 +107,7 @@ new VuePopRouter({
 ```
 
 ## 切换页面
-```
+```JavaScript
 this.$router.push("Matryoshka", { id: item });
 
 this.$router.back();
