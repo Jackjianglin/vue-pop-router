@@ -2,8 +2,21 @@
 
 50 行代码模拟一个vue 路由，到达新页面不会销毁旧页面
 
-## 预览
 
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+## 预览
+![预览](./screenshot/normal.gif)
+
+## 路由代码
 ```
 function VuePopRouter({ routers }) {
     // 存放路由数据，响应式对象驱动dom 变换
@@ -62,22 +75,38 @@ function VuePopRouter({ routers }) {
 }
 ```
 
-## Project setup
+## App.vue 中注册入口
+
 ```
-yarn install
+<template>
+  <div id="app">
+    <router-view></router-view>
+  </div>
+</template>
 ```
 
-### Compiles and hot-reloads for development
+## main.js 文件中初始化路由
+
 ```
-yarn serve
+import VuePopRouter from './router'
+const routers = [
+  {
+    name: 'home',
+    page: import('./components/home.vue')
+  },
+  {
+    name: 'Matryoshka',
+    page: import('./components/Matryoshka.vue')
+  }
+]
+new VuePopRouter({
+  routers
+})
 ```
 
-### Compiles and minifies for production
+## 切换页面
 ```
-yarn build
-```
+this.$router.push("Matryoshka", { id: item });
 
-### Lints and fixes files
-```
-yarn lint
+this.$router.back();
 ```

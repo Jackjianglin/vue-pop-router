@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 import App from './App.vue'
-import VueRouter from './router'
+import VuePopRouter from './router'
 Vue.config.productionTip = false
 const routers = [
   {
@@ -13,7 +13,7 @@ const routers = [
     page: import('./components/Matryoshka.vue')
   }
 ]
-new VueRouter({
+new VuePopRouter({
   routers
 })
 const app = new Vue({
